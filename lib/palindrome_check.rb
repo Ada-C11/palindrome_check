@@ -3,5 +3,16 @@
 # Time complexity: ?
 # Space complexity: ?
 def palindrome_check(my_phrase)
-  raise NotImplementedError
+  return false if my_phrase == nil
+  return true if my_phrase == "" || my_phrase.length == 1
+  i = 0
+  j = my_phrase.length - 1
+  while i < j
+    i += 1 while my_phrase[i] == " "
+    j -= 1 while my_phrase[j] == " " 
+    return false if my_phrase[i] != my_phrase[j]
+    i += 1
+    j -= 1
+  end
+  return true
 end
