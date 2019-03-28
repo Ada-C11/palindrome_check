@@ -1,6 +1,6 @@
-require 'minitest/autorun'
-require 'minitest/reporters'
-require_relative '../lib/palindrome_check'
+require "minitest/autorun"
+require "minitest/reporters"
+require_relative "../lib/palindrome_check"
 
 describe "palindrome" do
   describe "basic tests" do
@@ -46,7 +46,7 @@ describe "palindrome" do
     end
 
     it "palindrome with multiple spaces to ignore" do
-      test_string = " pull   up "
+      test_string = " pull     up "
 
       palindrome_check(test_string).must_equal true
     end
