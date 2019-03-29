@@ -12,10 +12,16 @@ def palindrome_check(my_phrase)
   my_phrase = remove_spaces(my_phrase)
 
   b = 0
-  l = my_phrase.length - 1
-  while b < l
-    
+  l = my_phrase.length
+  last = l - 1
+  while b < last
+   if my_phrase[b] != my_phrase[last] 
+    return false
+   end
+    b += 1
+    last -= 1
   end
+  return true
 end
 
 def remove_spaces(characters)
@@ -28,7 +34,7 @@ def remove_spaces(characters)
     c += 1
     end
     first_char = c
-    while characters[c] != " "
+    while characters[c] != " " && c < l
     c += 1
     end
     last_char = (c - 1)
