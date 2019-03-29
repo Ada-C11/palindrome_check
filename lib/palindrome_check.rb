@@ -2,6 +2,41 @@
 # Return true if the string is a palindrome. Return false otherwise.
 # Time complexity: ?
 # Space complexity: ?
+
+require 'pry'
+
 def palindrome_check(my_phrase)
-  raise NotImplementedError
+  return false if  my_phrase == nil
+  return true if my_phrase[0] == ""
+
+  my_phrase = remove_spaces(my_phrase)
+
+  b = 0
+  l = my_phrase.length - 1
+  while b < l
+    
+  end
+end
+
+def remove_spaces(characters)
+  c = 0
+  l = characters.length
+  words = ""
+
+  while c < l
+    while characters[c] == " "
+    c += 1
+    end
+    first_char = c
+    while characters[c] != " "
+    c += 1
+    end
+    last_char = (c - 1)
+    while first_char <= last_char
+      words += characters[first_char]
+      first_char += 1
+    end
+    c += 1
+  end
+  return words
 end
