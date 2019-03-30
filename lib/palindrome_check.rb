@@ -4,6 +4,7 @@
 # Space complexity: ?
 
 def palindrome_check(my_phrase)
+  return false if my_phrase == nil
   leftindex = 0
   rightindex = my_phrase.length - 1
 
@@ -11,14 +12,14 @@ def palindrome_check(my_phrase)
     l_char = my_phrase[leftindex]
     r_char = my_phrase[rightindex]
 
-    if l_char == " "
+    if l_char == " " || l_char == nil
       until l_char != " "
         leftindex += 1
         l_char = my_phrase[leftindex]
       end
     end
 
-    if r_char == " "
+    if r_char == " " || r_char == nil
       until r_char != " "
         rightindex -= 1
         r_char = my_phrase[rightindex]
