@@ -1,6 +1,8 @@
-require 'minitest/autorun'
-require 'minitest/reporters'
-require_relative '../lib/palindrome_check'
+gem "minitest", ">= 5.0.0"
+require "minitest/autorun"
+require "minitest/reporters"
+require "minitest/pride"
+require_relative "../lib/palindrome_check"
 
 describe "palindrome" do
   describe "basic tests" do
