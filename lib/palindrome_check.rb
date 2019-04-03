@@ -12,18 +12,17 @@ def palindrome_check(my_phrase)
   i = 0
   j = 1
   while i < my_phrase.length
-    if my_phrase[i] == ' ' || my_phrase[-j] == ' '
+    if my_phrase[i] == ' '
+      i += 1
+    elsif my_phrase[-j] == ' '
+      j += 1
+    elsif my_phrase[i] == my_phrase[-j]
       j += 1
       i += 1
-    end
-      if my_phrase[i] == my_phrase[-j]
-        j += 1
-        i += 1
-      else
+    else
       return false
-      end
-    return true
+    end
   end
+  return true
 end
 
-puts palindrome_check('madam')
