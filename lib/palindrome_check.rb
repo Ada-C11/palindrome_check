@@ -1,7 +1,9 @@
 # A method to check if the input string is a palindrome.
 # Return true if the string is a palindrome. Return false otherwise.
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n) where n is the length of my_phrase, because in the worst-case scenario, 
+# the algorithm will loop through the length of the string 1/2 times its length, so the time 
+# complexity is dependent on the string's length.
+# Space complexity: O(1) because the variables used are consistent and no new data structure is created.
 def palindrome_check(my_phrase)
   if my_phrase == ""
     return true
